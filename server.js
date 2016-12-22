@@ -7,7 +7,7 @@ app.use(function(req,res,next){
   if(req.headers['x-forwareded-proto']==='http'){
     next();
   } else {
-    res.direct('http://'+req.hostname+req.url);
+    res.redirect('http://'+req.hostname+req.url);
   }
 })
 
