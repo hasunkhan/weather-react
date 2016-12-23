@@ -1,3 +1,4 @@
+
 var React = require('react');
 var WeatherForm = require('WeatherForm');
 var WeatherMessage = require('WeatherMessage');
@@ -50,7 +51,7 @@ var Weather = React.createClass({
     function renderMessage() {
       if(isLoading) {
         return (
-          <h3>Temp is Loading ...</h3>
+          <h3 className="text-center">Temp is Loading ...</h3>
         );
       } else if (temp && location){
         return (
@@ -60,7 +61,8 @@ var Weather = React.createClass({
     }
     return (
       <div>
-        <h3>Weather Component</h3>
+        <h1 className="text-center">Fetch Weather </h1>
+        //<h3>Weather Component</h3>
         <WeatherForm onSearch={this.handleSearch} />
         {renderMessage()}
       </div>
